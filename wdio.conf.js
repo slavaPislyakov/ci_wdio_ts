@@ -98,6 +98,9 @@ exports.config = {
           "--disable-dev-shm-usage",
           "--disable-browser-side-navigation",
           "--no-sandbox",
+          "--headless",
+          "--remote-debugging-port=9222",
+          "--disable-extensions",
         ],
       },
       //
