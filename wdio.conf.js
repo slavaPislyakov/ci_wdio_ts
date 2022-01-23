@@ -82,6 +82,32 @@ exports.config = {
       maxInstances: 1,
       //
       browserName: "chrome",
+      "goog:chromeOptions": {
+        args: [
+          "--whitelisted-ips=",
+          "--disable-infobars=true", // note this does not remove "Chrome is being controlled by automated test software" notification
+          "--disable-gpu",
+          "window-size=1920,1080",
+          "test-type=browser",
+          "disable-notifications",
+          "incognito",
+          "disable-application-cache",
+          "-disable-extensions", // used to bypass loading of extensions which will be blocked by MMC security policy anyway
+          "--ignore-certificate-errors",
+          "enable-automation",
+          "--disable-dev-shm-usage",
+          "--disable-browser-side-navigation",
+          "--no-sandbox",
+        ],
+      },
+      //
+      // Parameter to ignore some or all default flags
+      // - if value is true: ignore all DevTools 'default flags' and Puppeteer 'default arguments'
+      // - if value is an array: DevTools filters given default arguments
+      // 'wdio:devtoolsOptions': {
+      //    ignoreDefaultArgs: true,
+      //    ignoreDefaultArgs: ['--disable-sync', '--disable-extensions'],
+      // }
       acceptInsecureCerts: true,
       // If outputDir is provided WebdriverIO can capture driver session logs
       // it is possible to configure which logTypes to include/exclude.
