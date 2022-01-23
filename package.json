@@ -15,6 +15,7 @@
     "wdio-chromedriver-service": "^7.2.6"
   },
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "wdio": "wdio run wdio.conf.js"
   }
 }
