@@ -1,5 +1,5 @@
 const getWebElement = async (
-  elementLocator,
+  elementLocator: string,
   reverseValue = false,
   timeout = browser.config.mochaOpts.timeout,
 ): Promise<WebdriverIO.Element> => {
@@ -10,7 +10,7 @@ const getWebElement = async (
 };
 
 const getTextElement = async (
-  elementLocator,
+  elementLocator: string,
   reverseValue = false,
   timeout = browser.config.mochaOpts.timeout,
 ): Promise<WebdriverIO.Element> => {

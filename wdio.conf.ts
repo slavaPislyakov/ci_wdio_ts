@@ -1,4 +1,6 @@
-exports.config = {
+import type { Options } from "@wdio/types";
+
+export const config: Options.Testrunner = {
   //
   // ====================
   // Runner Configuration
